@@ -27,11 +27,7 @@ A Streamlit-based application to manage and simulate a live team auction. This d
     ```
 
 2.  **Initialize Database & Admin User**:
-    Run this script once to set up the database and create the default admin account.
-    ```bash
-    python create_admin.py
-    ```
-    *Default Credentials:* `admin` / `admin123`
+    handled by the main app admin user and password taken from environment variables
 
 3.  **Run the Application**:
     ```bash
@@ -45,5 +41,4 @@ A Streamlit-based application to manage and simulate a live team auction. This d
 ## Project Structure
 - `auction_app.py`: Main Streamlit application.
 - `db.py`: Database management module.
-- `create_admin.py`: Setup script for DB and Admin user.
 - `auction.db`: SQLite database (created after setup).

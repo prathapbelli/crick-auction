@@ -9,6 +9,9 @@ st.set_page_config(page_title="Cricket Auction Dashboard", layout="wide")
 # --- Database Initialization ---
 if 'db_initialized' not in st.session_state:
     db.init_db()
+    db_user = st.secrets["DB_USERNAME"]
+    db_password = st.secrets["DB_PASSWORD"]
+    db.create_user(db_user, db_password) 
     st.session_state['db_initialized'] = True
 
 # --- Sidebar: Role Selection ---

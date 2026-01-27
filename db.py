@@ -55,8 +55,10 @@ def create_user(username, password):
     try:
         c.execute("INSERT INTO users (username, password) VALUES (?, ?)", (username, password))
         conn.commit()
+        print("User created successfully")
         return True
     except sqlite3.IntegrityError:
+        print("User already exist")
         return False
     finally:
         conn.close()
