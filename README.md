@@ -29,6 +29,13 @@ A Streamlit-based application to manage and simulate a live team auction. This d
 2.  **Initialize Database & Admin User**:
     handled by the main app admin user and password taken from environment variables
 
+2.2 **Create env file**
+    create local file to store secretes while running locally
+    .streamlit/secrets.toml
+    DB_USERNAME = ""
+    DB_PASSWORD = ""
+
+
 3.  **Run the Application**:
     ```bash
     streamlit run auction_app.py
